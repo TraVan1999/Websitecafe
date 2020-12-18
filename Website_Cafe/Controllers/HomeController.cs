@@ -10,6 +10,7 @@ namespace Website_Cafe.Controllers
 {
     public class HomeController : Controller
     {
+        //Day la class HomeController
         LoaiSPModel dblsp = new LoaiSPModel();
         SanphamModel dbsp = new SanphamModel();
         // GET: Home
