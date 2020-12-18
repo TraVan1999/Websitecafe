@@ -1,0 +1,59 @@
+﻿@model Website_Cafe.Models.HDX
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/_LayoutAdmin1.cshtml";
+}
+
+<h2>Chi tiết</h2>
+
+<div>
+    <h4>Hóa đơn xuất</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.tenKH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tenKH)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.diaChi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.diaChi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.sdt)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sdt)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ngayXuat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ngayXuat)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tongtien)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tongtien)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Sửa", "Edit", new { id = Model.maHDX }) |
+    @Html.ActionLink("Trở lại danh sách", "Index")
+</p>

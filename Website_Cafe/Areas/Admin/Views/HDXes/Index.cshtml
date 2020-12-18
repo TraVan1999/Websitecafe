@@ -1,0 +1,64 @@
+﻿@model IEnumerable<Website_Cafe.Models.HDX>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/_LayoutAdmin1.cshtml";
+}
+
+<h2>Hóa đơn xuất</h2>
+
+<p>
+    @Html.ActionLink("Tạo mới", "Create")
+</p>
+<table class="table table-bordered table-striped "id="example" style="width:100%;">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.tenKH)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.diaChi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.sdt)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ngayXuat)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.tongtien)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.tenKH)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.diaChi)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.sdt)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ngayXuat)
+                </td>
+                <td>
+                    @*@Html.DisplayFor(modelItem => item.tongtien)*@
+                    <span>@string.Format("{0:#,##0}", item.tongtien)</span>
+                </td>
+                <td>
+                    @Html.ActionLink("Sửa", "Edit", new { id = item.maHDX }) |
+                    @Html.ActionLink("Chi tiết", "Details", new { id = item.maHDX }) |
+                    @Html.ActionLink("Xóa", "Delete", new { id = item.maHDX })
+                </td>
+            </tr>
+        }
+
+    </tbody>
+</table>

@@ -1,0 +1,43 @@
+﻿@model Website_Cafe.Models.HDN
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/_LayoutAdmin1.cshtml";
+}
+
+<h2>Chi tiết</h2>
+
+<div>
+    <h4>Hóa đơn nhập</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.tenNV)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tenNV)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ngayNhap)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ngayNhap)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tongtien)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tongtien)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Sửa", "Edit", new { id = Model.maHDN }) |
+    @Html.ActionLink("Trở lại danh sách", "Index")
+</p>

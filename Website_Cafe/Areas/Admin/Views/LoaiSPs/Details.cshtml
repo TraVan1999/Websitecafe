@@ -1,0 +1,35 @@
+﻿@model Website_Cafe.Models.LoaiSP
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/_LayoutAdmin1.cshtml";
+}
+
+<h2>Chi tiết</h2>
+
+<div>
+    <h4>Loại sản phẩm</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TenLoai)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenLoai)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GhiChu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GhiChu)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Sửa", "Edit", new { id = Model.MaLoai }) |
+    @Html.ActionLink("Trở lại danh sách", "Index")
+</p>

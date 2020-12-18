@@ -1,0 +1,68 @@
+﻿@model IEnumerable<Website_Cafe.Models.SanPham>
+@{
+    ViewBag.Title = "SearchSP";
+    Layout = "~/Views/_LayoutHome.cshtml";
+}
+
+<div class="content-page">
+    <div class="container">
+        <!-- featured category  -->
+        <div class="category-featured Vegetables">
+            <nav class="navbar nav-menu show-brand">
+                <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-brand"><a href="#"> <img alt="fashion" src="~/Assets/images/icon_like.png" /> Danh sách sản phẩm </a></div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse">
+
+                    </div><!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
+
+            </nav>
+            <div class="product-featured clearfix">
+                <div class="row">
+
+                    <div class="col-sm-12">
+                        <div class="box-right">
+                            <!--&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
+                            <ul class="product-list">
+
+                                @foreach (var item in Model)
+                                {
+                                    <li class="col-sm-4 product-item">
+                                        <div class="left-block">
+                                            <a>
+                                                <img style="height:200px" class="img-responsive" alt="product" src="~/Assets/images/@item.Anh" />
+                                            </a>
+
+                                            <div class="quick-view">
+                                                <a title="Yêu thích" class="heart" href="#"></a>
+
+                                                <a title="Xem nhanh" href="~/Assets/images/@item.Anh" class="search fancybox-button"></a>
+                                            </div>
+                                            <div class="add-to-cart">
+                                                <a class="add-item-to-cart" title="Đặt phòng" href="#" data-name="@item.TenSP"
+                                                   data-price="55000" data-image="~/Assets/vegetables/spinach_300x300.jpg" data-product-code="SP109">Đặt phòng</a>
+                                            </div>
+                                        </div>
+                                        <div class="right-block">
+                                            <h5 style="height:30px" class="product-name">@Html.ActionLink(item.TenSP, "SPDetail", new { id = item.MaSP })</h5>
+
+                                            <div class="content_price">
+                                                <span class="price product-price"><span style="color: black">Giá: </span>@item.DonGia</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                }
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end featured category -->
+        <!-- end featured category -->
+    </div>
+</div>
+

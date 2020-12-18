@@ -1,0 +1,90 @@
+﻿@model PagedList.IPagedList<Website_Cafe.Models.SanPham>
+@using PagedList.Mvc;
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/_LayoutHome.cshtml";
+}
+<div id="home-slider">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 header-top-right">
+                <div class="homeslider">
+                    <ul id="contenhomeslider">
+                        <li><img alt="Coffee" src="~/Assets/images/cafe.jpg" title="Coffee" /></li>
+                        <li><img alt="Coffee" src="~/Assets/images/cafe1.jpg" title="Coffee" /></li>
+                        <li><img alt="Coffee" src="~/Assets/images/cafe2.jpg" title="Coffee" /></li>
+                        <li><img alt="Coffee" src="~/Assets/images/cafe3.jpg" title="Coffee" /></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="content-page">
+    <div class="container">
+        <!-- featured category  -->
+        <div class="category-featured Vegetables">
+            <nav class="navbar nav-menu show-brand">
+                <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-brand"><a href="#"> @*<img alt="fashion" src="~/Assets/images/icon_books-stack-of-three.png" />*@ Danh sách sản phẩm</a></div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse">
+
+                    </div><!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
+
+            </nav>
+            <div class="product-featured clearfix">
+                <div class="row">
+
+                    <div class="col-sm-12">
+                        <div class="box-right">
+                            <!--&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
+                            @foreach (var item in Model)
+                            {
+                                <ul class="product-list">
+                                    <li class="col-sm-3 product-item">
+                                        <div class="left-block">
+                                            <a href="/Home/SPDetail/@item.MaSP">
+                                                <img class="img-responsive" alt="product"
+                                                     src="~/Assets/images/@item.Anh" />
+                                            </a>
+
+                                            <div class="quick-view">
+                                                <a title="Add to my wishlist" class="heart" href="#"></a>
+                                                <a title="Add to compare" class="compare" href="#"></a>
+                                                <a title="Quick view" href="~/Assets/images/cafe.jpg" class="search fancybox-button"></a>
+                                            </div>
+                                            <div class="add-to-cart">
+                                                <a class="add-item-to-cart" title="Add to Cart" onclick="muahang('@item.MaSP')" data-name="Spinach - 1kg"
+                                                   data-price="55000" data-image="vegetables/spinach_300x300.jpg" data-product-code="SP109">Thêm vào giỏ hàng</a>
+                                            </div>
+                                            <div class="bestseller"></div>
+                                        </div>
+                                        <div class="right-block">
+                                            <h5 class="product-name"><a href="/Home/SPDetail/@item.MaSP">@item.TenSP </a></h5>
+
+                                            <div class="content_price">
+                                                <span class="price product-price"><span style="color: black">Giá bán:</span> @string.Format("{0:#,##0}", item.DonGia)</span>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                </ul>
+                            }
+                            <br /><br />
+                            &nbsp;&nbsp;&nbsp;&nbsp; Trang @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) / @Model.PageCount
+
+                            &nbsp;&nbsp;&nbsp;&nbsp; @Html.PagedListPager(Model, page => Url.Action("Index", new { page }))
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end featured category -->
+    </div>
+</div>
+
+

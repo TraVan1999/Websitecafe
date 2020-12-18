@@ -1,0 +1,248 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    @*<link rel="icon" href="~/Assets/images/favicon.ico" type="~/Assets/image/ico" />*@
+
+    <title>White Cloud</title>
+
+    <!-- Bootstrap -->
+    <link href="~/Assets/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    @*<link href=" rel="stylesheet" />*@
+    <link href="https://cdn.datatables.net/1.10.22/css/dataTables.bootstrap4.min.css" rel="stylesheet" />
+    <!-- Font Awesome -->
+    <link href="~/Assets/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!--NProgress -->
+    <link href="~/Assets/vendors/nprogress/nprogress.css" rel="stylesheet">
+    <!--iCheck-->
+    <link href="~/Assets/vendors/iCheck/skins/flat/green.css" rel="stylesheet">
+
+    @*bootstrap-progressbar
+        <link href="~/Assets/vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
+         JQVMap
+        <link href="~/Assets/vendors/jqvmap/dist/jqvmap.min.css" rel="stylesheet" />
+         bootstrap-daterangepicker
+        <link href="~/Assets/vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">*@
+
+    @*<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css"></script>
+        <script src="https://cdn.datatables.net/1.10.22/css/dataTables.bootstrap4.min.css"></script>*@
+
+    <!-- Custom Theme Style -->
+    <link href="~/Assets/build/css/custom.min.css" rel="stylesheet">
+</head>
+
+<body class="nav-md">
+    <div class="container body">
+        <div class="main_container">
+            <div class="col-md-3 left_col">
+                <div class="left_col scroll-view">
+                    <div class="navbar nav_title" style="border: 0;">
+                        <a href="~/Home/Index" class="site_title"><i class="fa fa-paw"></i> <span>White Cloud!</span></a>
+                    </div>
+
+                    <div class="clearfix"></div>
+
+                    <!-- menu profile quick info -->
+                    <div class="profile clearfix">
+                        <div class="profile_pic">
+                            <img src="~/Assets/images/travan.jpg" alt="..." class="~/Assets/img-circle profile_img" width="50dp" height="60dp">
+                        </div>
+                        <div class="profile_info">
+                            <span>Welcome,</span>
+                            <h2>Trà Vân</h2>
+                        </div>
+                    </div>
+                    <!-- /menu profile quick info -->
+
+                    <br />
+
+                    <!-- sidebar menu -->
+                    <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+                        <div class="menu_section">
+                            <h3>Trang quản trị</h3>
+                            <ul class="nav side-menu">
+                                <li>
+                                    <a href="~/Admin/SanPhams/Index"><i class="fa fa-home"></i> Quản lý sản phẩm <span class="fa fa-chevron-down"></span></a>
+                                    <a href="~/Admin/HDXes/Index"><i class="fa fa-home"></i> Quản lý hóa đơn xuất <span class="fa fa-chevron-down"></span></a>
+                                    <a href="~/Admin/LoaiSPs/Index"><i class="fa fa-home"></i> Quản lý loại sản phẩm <span class="fa fa-chevron-down"></span></a>
+                                    <a href="~/Admin/HDNs/Index"><i class="fa fa-home"></i> Quản lý hóa đơn nhập <span class="fa fa-chevron-down"></span></a>
+                                    @*<a href=""><i class="fa fa-home"></i> Quản lý sản phẩm <span class="fa fa-chevron-down"></span></a>*@
+
+                                </li>
+
+                            </ul>
+                        </div>
+
+
+                    </div>
+                    <!-- /sidebar menu -->
+                    <!-- /menu footer buttons -->
+                    <div class="sidebar-footer hidden-small">
+                        <a data-toggle="tooltip" data-placement="top" title="Settings">
+                            <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+                        </a>
+                        <a data-toggle="tooltip" data-placement="top" title="FullScreen">
+                            <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
+                        </a>
+                        <a data-toggle="tooltip" data-placement="top" title="Lock">
+                            <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
+                        </a>
+                        <a data-toggle="tooltip" data-placement="top" title="Logout" href="login.html">
+                            <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+                        </a>
+                    </div>
+                    <!-- /menu footer buttons -->
+                </div>
+            </div>
+
+            <!-- top navigation -->
+            <div class="top_nav">
+                <div class="nav_menu">
+                    <nav>
+                        <div class="nav toggle">
+                            <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+                        </div>
+
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="">
+                                <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                    <img src="~/Assets/images/travan.jpg">Tra Van
+                                    <span class=" fa fa-angle-down"></span>
+                                </a>
+                                <ul class="dropdown-menu dropdown-usermenu pull-right">
+                                    <li><a href="javascript:;"> Hồ sơ</a></li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <span class="badge bg-red pull-right">50%</span>
+                                            <span>Cài đặt</span>
+                                        </a>
+                                    </li>
+                                    <li><a href="javascript:;">Giúp đỡ</a></li>
+                                    <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
+                                </ul>
+                            </li>
+
+                            <li role="presentation" class="dropdown">
+                                <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false">
+                                    <i class="fa fa-envelope-o"></i>
+                                    <span class="badge bg-green">6</span>
+                                </a>
+                                <ul id="menu1" class="dropdown-menu list-unstyled msg_list" role="menu">
+                                    <li>
+                                        <a>
+                                            <span class="image"><img src="~/Assets/images/linh.jpg" /></span>
+                                            <span>
+                                                <span>Khánh Linh</span>
+                                                <span class="time">3 phút trước</span>
+                                            </span>
+                                            <span class="message">
+                                                Đồ ăn rất ngon...
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a>
+                                            <span class="image"><img src="~/Assets/images/hoa.jpg" /></span>
+                                            <span>
+                                                <span>Thu Hòa</span>
+                                                <span class="time">5 phút trước</span>
+                                            </span>
+                                            <span class="message">
+                                                Quán phục vụ rất tận tình, chu đáo...
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a>
+                                            <span class="image"><img src="~/Assets/images/nhinh.jpg" /></span>
+                                            <span>
+                                                <span>Luong Pil</span>
+                                                <span class="time">3 mins ago</span>
+                                            </span>
+                                            <span class="message">
+                                                Cảm ơn quán!
+                                            </span>
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <!-- /top navigation -->
+            <!-- page content -->
+            <div class="right_col" role="main">
+                <!-- top tiles -->
+                @RenderBody()
+                <!-- /top tiles -->
+
+
+            </div>
+            <!-- /page content -->
+            <!-- footer content -->
+            <footer>
+                <div class="pull-right">
+                    White Cloud - Bootstrap Admin Template by <a href="https://colorlib.com">Tra Van</a>
+                </div>
+                <div class="clearfix"></div>
+            </footer>
+            <!-- /footer content -->
+        </div>
+    </div>
+
+    @*jQuery
+        <script src="~/Assets/vendors/jquery/dist/jquery.min.js"></script>
+         Bootstrap
+        <script src="~/Assets/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+         FastClick
+        <script src="~/Assets/vendors/fastclick/lib/fastclick.js"></script>
+         NProgress
+        <script src="~/Assets/vendors/nprogress/nprogress.js"></script>
+         Chart.js
+        <script src="~/Assets/vendors/Chart.js/dist/Chart.min.js"></script>
+         gauge.js
+        <script src="~/Assets/vendors/gauge.js/dist/gauge.min.js"></script>
+         bootstrap-progressbar
+        <script src="~/Assets/vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+         iCheck
+        <script src="~/Assets/vendors/iCheck/icheck.min.js"></script>
+         Skycons
+        <script src="~/Assets/vendors/skycons/skycons.js"></script>
+         Flot
+        <script src="~/Assets/vendors/Flot/jquery.flot.js"></script>
+        <script src="~/Assets/vendors/Flot/jquery.flot.pie.js"></script>
+        <script src="~/Assets/vendors/Flot/jquery.flot.time.js"></script>
+        <script src="~/Assets/vendors/Flot/jquery.flot.stack.js"></script>
+        <script src="~/Assets/vendors/Flot/jquery.flot.resize.js"></script>
+         Flot plugins
+        <script src="~/Assets/vendors/flot.orderbars/js/jquery.flot.orderBars.js"></script>
+        <script src="~/Assets/vendors/flot-spline/js/jquery.flot.spline.min.js"></script>
+        <script src="~/Assets/vendors/flot.curvedlines/curvedLines.js"></script>
+         DateJS
+        <script src="~/Assets/vendors/DateJS/build/date.js"></script>
+         JQVMap
+        <script src="~/Assets/vendors/jqvmap/dist/jquery.vmap.js"></script>
+        <script src="~/Assets/vendors/jqvmap/dist/maps/jquery.vmap.world.js"></script>
+        <script src="~/Assets/vendors/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
+         bootstrap-daterangepicker
+        <script src="~/Assets/vendors/moment/min/moment.min.js"></script>
+        <script src="~/Assets/vendors/bootstrap-daterangepicker/daterangepicker.js"></script>*@
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+    <script src="~/Assets/js/Search.js"></script>
+    <script src="https://cdn.datatables.net/1.10.22/js/dataTables.bootstrap4.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#example').DataTable();
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,217 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="~/Assets/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="~/Assets/lib/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="~/Assets//font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="~/Assets/lib/select2/css/select2.min.css" />
+    <link rel="stylesheet" type="text/css" href="~/Assets/lib/jquery.bxslider/jquery.bxslider.css" />
+    <link rel="stylesheet" type="text/css" href="~/Assets/lib/owl.carousel/owl.carousel.css" />
+    <link rel="stylesheet" type="text/css" href="~/Assets/lib/jquery-ui/jquery-ui.css" />
+    <link rel="stylesheet" type="text/css" href="~/Assets/lib/fancyBox/source/jquery.fancybox.css" />
+    <link rel="stylesheet" type="text/css" href="~/Assets/css/animate.css" />
+    <link rel="stylesheet" type="text/css" href="~/Assets/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="~/Assets/css/green.css" />
+    <link rel="stylesheet" type="text/css" href="~/Assets/css/responsive.css" />
+    <link rel="stylesheet" type="text/css" href="~/Assets/css/style_frm_dkdn.css" />
+    <link rel="stylesheet" href="~/Assets/css/switcher.css">
+    <title>White Cloud</title>
+</head>
+<body class="green">
+    <!-- HEADER -->
+    <div id="header" class="header">
+
+        <!-- MAIN HEADER -->
+        <div class="container main-header">
+            <div class="row">
+                <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 logo">
+                    <a href="index.html"><img alt="White Cloud" src="~/Assets/images/logo-coffee1.jpg" sizes="50px" /></a>
+                </div>
+                <div class="col-xs-4 col-sm-12 col-md-5 col-lg-4 header-search-box">
+                    <form class="form-inline">
+                        <div class="form-group input-serach">
+                            <input type="text" placeholder="Tìm kiếm ...">
+                            <button type="submit" class="pull-right btn-search"><i class="fa fa-search"></i></button>
+                        </div>
+                       
+                    </form>
+                </div>
+
+                <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 group-button-header">
+                    <a title="So sánh" href="#" class="btn-compare">Compare</a>
+                    <a title="Giỏ hàng của bạn" href="#" class="btn-heart">Heart</a>
+
+                    <div class="btn-cart" id="cart-block">
+                        <a title="Đăng nhập" href="" data-toggle="modal" data-target="#myModal">Log In</a>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END MANIN HEADER -->
+        <div id="nav-top-menu" class="nav-top-menu">
+            <div class="container">
+                <div class="row">
+
+                    <div id="main-menu" class="col-sm-12 main-menu">
+                        <nav class="navbar navbar-default">
+                            <div class="container-fluid">
+                                <div class="navbar-header">
+                                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                                            data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                                        <i class="fa fa-bars"></i>
+                                    </button>
+                                    <a class="navbar-brand" href="#">MENU</a>
+                                </div>
+                                <div id="navbar" class="navbar-collapse collapse">
+                                    <ul class="nav navbar-nav">
+                                        <li class="active"><a href="~/Home/Index"><span class="fa fa-home"></span> Trang chủ</a></li>
+                                        <li><a href="">Sản phẩm</a> </li>
+                                        <li><a href="news.html">Tin tức</a></li>
+                                        <li><a href="policy-faq.html">Chính sách </a></li>
+                                        <li><a href="about-us.html">Thông tin</a></li>
+                                        <li><a href="contact-us.html">Liên hệ</a></li>
+                                    </ul>
+                                </div><!--/.nav-collapse -->
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+                <!-- userinfo on top-->
+                <div id="form-search-opntop">
+                </div>
+                <!-- userinfo on top-->
+                <div id="user-info-opntop">
+                </div>
+                <!-- CART ICON ON MMENU -->
+                <div id="shopping-cart-box-ontop">
+                    <i class="fa fa-user" data-toggle="modal" data-target="#myModal"></i>
+
+                    <div class="shopping-cart-box-ontop-content"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- end header -->
+
+    @RenderBody()
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="container">
+            <!-- introduce-box -->
+            <div id="introduce-box" class="row">
+                <div class="col-md-3">
+                    <div id="address-box">
+                        <a href="#"><img src="~/Assets/images/coffee.png" alt="logo" /></a>
+
+                        <div id="address-list">
+                            <div class="tit-name">Địa chỉ:</div>
+                            <div class="tit-contain">Đồng Than - Yên Mỹ - Hưng Yên.</div>
+                            <div class="tit-name">Điện thoại:</div>
+                            <div class="tit-contain">(+84) 6 135 8526</div>
+                            <div class="tit-name">Email:</div>
+                            <div class="tit-contain">whitecloud@gmail.com</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="introduce-title">Chăm sóc khách hàng</div>
+                            <ul id="introduce-support" class="introduce-list">
+                                <li> Thứ 2 - Thứ 6: 7am - 8pm</li>
+                                <li>Thứ bảy & Chủ nhật: 7am - 6pm</li>
+                                
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="introduce-title">Chính sách</div>
+                            <ul id="introduce-Account" class="introduce-list">
+                                <li><a href="policy-faq.html">Chính sách bảo mật</a></li>
+                                <li><a href="policy-faq.html">Chính sách thanh toán</a></li>
+                                <li><a href="policy-faq.html">Chính sách đổi trả</a></li>
+                                <li><a href="policy-faq.html">Điều khoản</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div id="contact-box">
+                        @*<div class="introduce-title">Subscribe to Eco Shop newsletter</div>*@
+                        <div class="input-group" id="mail-box">
+                            <input type="text" placeholder="Địa chỉ email của bạn" />
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" type="button">OK</button>
+                            </span>
+                        </div><!-- /input-group -->
+                        <div class="introduce-title">Theo dõi chúng tôi</div>
+                        <!--<div class="social-link">-->
+                        <!--<a href="#"><i class="fa fa-facebook"></i></a>-->
+                        <!--<a href="#"><i class="fa fa-pinterest-p"></i></a>-->
+                        <!--<a href="#"><i class="fa fa-google-plus"></i></a>-->
+                        <!--<a href="#"><i class="fa fa-youtube"></i></a>-->
+                        <!--</div>-->
+                        <div class="social-link">
+                            <ul class="social-icons">
+                                <li><a class="rss" data-original-title="rss" href="#"></a></li>
+                                <li><a class="facebook" data-original-title="facebook" href="#"></a></li>
+                                <li><a class="twitter" data-original-title="twitter" href="#"></a></li>
+                                <li><a class="googleplus" data-original-title="googleplus" href="#"></a></li>
+                                <li><a class="linkedin" data-original-title="linkedin" href="#"></a></li>
+                                <li><a class="youtube" data-original-title="youtube" href="#"></a></li>
+                                <li><a class="vimeo" data-original-title="vimeo" href="#"></a></li>
+                                <li><a class="skype" data-original-title="skype" href="#"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div><!-- /#introduce-box -->
+
+
+            <div id="footer-menu-box">
+                <p class="text-center">&#169; 2020 White Cloud</p>
+            </div><!-- /#footer-menu-box -->
+        </div>
+    </footer>
+
+    <a href="#" class="scroll_top" title="Scroll to Top" style="display: inline;">Scroll</a>
+    <!-- Script-->
+
+    <script type="text/javascript" src="~/Assets/lib/jquery/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="~/Assets/lib/jquery-migrate.min.js"></script>
+    <script type="text/javascript" src="~/Assets/lib/fancyBox/source/jquery.fancybox.pack.js"></script>
+    <script type="text/javascript" src="~/Assets/lib/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="~/Assets/lib/select2/js/select2.min.js"></script>
+    <script type="text/javascript" src="~/Assets/lib/jquery.bxslider/jquery.bxslider.min.js"></script>
+    <script type="text/javascript" src="~/Assets/lib/owl.carousel/owl.carousel.min.js"></script>
+
+
+
+    <script type="text/javascript" src="~/Assets/js/jquery.actual.min.js"></script>
+    <script type="text/javascript" src="~/Assets/js/theme-script.js"></script>
+    <script type="text/javascript" src="~/Assets/js/shoppingCart.js"></script>
+
+    <script type="text/javascript" src="~/Assets/js/layout.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function () {
+            Layout.init();
+            Layout.initOWL();
+            Layout.initTwitter();
+            Layout.initImageZoom();
+            Layout.initTouchspin();
+            Layout.initUniform();
+            Layout.initSliderRange();
+        });
+    </script>
+</body>
+
+</html>
+
